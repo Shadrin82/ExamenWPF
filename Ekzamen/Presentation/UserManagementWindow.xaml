@@ -1,0 +1,27 @@
+﻿<Window x:Class="Ekzamen.Presentation.UserManagementWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ekzamen.Presentation"
+        mc:Ignorable="d"
+        Title="UserManagementWindow" Height="450" Width="450">
+    <Grid>
+        <StackPanel Margin="40">
+            <TextBlock Text="Введите имя"/>
+            <TextBox x:Name="TbName" Text="{Binding firstname}"/>
+            <TextBlock Text="Введите отчество"/>
+            <TextBox x:Name="TbMiddlename" Text="{Binding middlename}"/>
+            <TextBlock Text="Введите фамилию"/>
+            <TextBox x:Name="TbLastname" Text="{Binding lastname}"/>
+            <TextBlock Text="Введите логин"/>
+            <TextBox x:Name="TbLogin" Text="{Binding Login}"/>
+            <TextBlock Text="Введите пароль"/>
+            <TextBox x:Name="TbPassword" Text="{Binding password}"/>
+            <TextBlock Text="Выберете роль "/>
+            <ComboBox x:Name="CbRole" DisplayMemberPath="namerole" SelectedValuePath="userroleid"/>
+            <Button x:Name="BtnSafeOrUpdate" Click="BtnSafeOrUpdate_Click" Content="Сохранить" Margin="0 30 0 0"/>
+        </StackPanel>
+        
+    </Grid>
+</Window>
